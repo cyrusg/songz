@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/cyrusg/genius
-  revision: 067e009ff12ebf3c5a95273082f9f5f790481a9b
+  revision: 6d3546bf819f52177215eb29f0c2d54845b92448
   specs:
     genius (0.1.3)
       httparty (~> 0.21.0)
