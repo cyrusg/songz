@@ -73,6 +73,9 @@ As we can see, the API is not behaving the same way each time (within seconds of
 
 A related irony is that the documentation says the max `per_page` value is 50. But in reality the API never returns more than 20 results. We just need to never count on a particular value to make any decisions in code.
 
+# A note about RSpec tests
+I updated the test setup in the gem (v1) and added a live test, but didn't have time to write any tests for my v2 version.
+
 # Setup
 - Grab the repo at https://github.com/cyrusg/songz.
 - The Genius API token is stored in the Rails credentials (development) file to which you should have access. I don't anticipate any issues with the setup in this regard.
@@ -86,3 +89,5 @@ If you want to see the modified gem in action:
 
 If you want to see the my bare bones API integration and artist search in action:
 `/api/v2/search?artist=xxx`
+
+My implementation attempts to weed out results that are most-likely not a match with the primary or featured artist by looking at their names and doing a rudimentary match with the name of the requested `artist`.
